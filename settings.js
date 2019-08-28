@@ -11,6 +11,13 @@ const settings = {
     qa: 'this is in QA environment',
     production: 'this is in PRO environment',
     $default: 'this is in LOCAL environment'
+  },
+  port: {
+    $filter: 'env',
+    development: 3333,
+    qa: 4444,
+    production: 5555,
+    $default: 3000
   }
 }
 const store = new Store(settings)
