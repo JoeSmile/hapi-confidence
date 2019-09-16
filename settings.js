@@ -2,7 +2,8 @@ const { Store } = require('confidence')
 
 const { env } = process
 const criteria = {
-  env: env.NODE_ENV
+  env: env.NODE_ENV,
+  random: 20
 }
 const settings = {
   platform: {
@@ -12,13 +13,14 @@ const settings = {
     production: 'this is in PRO environment',
     $default: 'this is in LOCAL environment'
   },
-  port: {
-    $filter: 'env',
-    development: 3333,
-    qa: 4444,
-    production: 5555,
-    $default: 3000
-  }
+  "key3": {
+    "$filter": "random",
+    "$range": [
+        { "limit": 10, "value": 4 },
+        { "limit": 20, "value": 5 }
+    ],
+    "$default": 6
+}
 }
 const store = new Store(settings)
 console.log(store.get('/', criteria))
