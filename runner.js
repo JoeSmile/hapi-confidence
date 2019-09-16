@@ -10,3 +10,4 @@ const compose = async () => {
   await server.start()
   console.log('server is running...', server.info.uri)
 })()
+

@@ -22,7 +22,6 @@ const settings = {
 }
 const store = new Store(settings)
 console.log(store.get('/', criteria))
-// exports.settings = store.get('/', criteria)
 module.exports = {
   settings: store.get('/', criteria)
 }
