@@ -12,7 +12,7 @@
   "author": "Joe",
   "license": "ISC",
   "dependencies": {
-    "@hapi/hapi": "^18.3.2",
+    "@hapi/hapi": "^19.1.1",
     "confidence": "^4.0.2",
     "glue": "^6.0.0",
     "hapi": "^18.1.0"
